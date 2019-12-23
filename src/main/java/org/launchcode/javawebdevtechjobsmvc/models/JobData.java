@@ -64,6 +64,7 @@ public class JobData {
             jobs = findByValue(value);
             return jobs;
         }
+
         for (Job job : allJobs) {
 
             String aValue = getFieldValue(job, column);
@@ -92,6 +93,7 @@ public class JobData {
 
         return theValue;
     }
+
     /**
      * Search all Job fields for the given term.
      *
@@ -202,6 +204,8 @@ public class JobData {
             e.printStackTrace();
         }
     }
+
+    // Getters
 
     public static ArrayList<Employer> getAllEmployers() {
         loadData();
