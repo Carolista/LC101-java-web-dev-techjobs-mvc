@@ -39,7 +39,8 @@
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
     <th:block th:if="${jobs}">
-        <h3>Search Results:</h3>
+        <h3 th:text="${#strings.capitalizeWords(resultsHeader)}"></h3>
+        <p th:if="${jobs.size() == 0}">No job listings found.</p>
         <table th:replace="fragments :: job-listing"></table>
     </th:block>
 
