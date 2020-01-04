@@ -27,5 +27,19 @@
         </div>
     </div>
 
+    <table th:fragment="job-listing" class="job-listing">
+        <tr th:each="jobs : ${jobs}">
+            <td>
+                <p>ID: <span th:text = "${jobs.getId()}"></span></p>
+                <p>Name: <span th:text = "${jobs.getName()}"></span></p>
+                <p>Employer: <span th:text = "${jobs.getEmployer()}"></span></p>
+                <p>Location: <span th:text = "${jobs.getLocation()}"></span></p>
+                <p>Position Type: <span th:text = "${jobs.getPositionType()}"></span></p>
+                <p>Core Skills: <span th:text = "${jobs.getCoreCompetency()}"></span></p>
+            </td>
+        </tr>
+    </table>
+
+
 </body>
 </html>

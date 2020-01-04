@@ -45,6 +45,8 @@ public class ListController {
         model.addAttribute("positions", JobData.getAllPositionTypes());
         model.addAttribute("skills", JobData.getAllCoreCompetency());
 
+        model.addAttribute("title", "Job Listings");
+
         return "list";
     }
 
@@ -59,7 +61,9 @@ public class ListController {
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
         }
         model.addAttribute("jobs", jobs);
+        model.addAttribute("columns", columnChoices);
 
         return "list-jobs";
     }
+
 }

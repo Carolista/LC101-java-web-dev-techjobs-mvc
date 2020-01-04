@@ -12,18 +12,7 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
-    <table class="centeredTable">
-        <tr th:each = "job : ${jobs}">
-            <td>
-                <p><b>ID:</b> <span th:text = "${job.getId()}"></span></p>
-                <p><b>Name:</b> <span th:text = "${job.getName()}"></span></p>
-                <p><b>Employer:</b> <span th:text = "${job.getEmployer()}"></span></p>
-                <p><b>Location:</b> <span th:text = "${job.getLocation()}"></span></p>
-                <p><b>Position Type:</b> <span th:text = "${job.getPositionType()}"></span></p>
-                <p><b>Skill:</b> <span th:text = "${job.getCoreCompetency()}"></span></p>
-            </td>
-        </tr>
-    </table>
+    <table th:replace="fragments :: job-listing"></table>
 
 </div>
 

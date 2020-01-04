@@ -20,6 +20,7 @@ public class HomeController {
         actionChoices.put("list", "List");
 
         model.addAttribute("actions", actionChoices);
+        model.addAttribute("title", "Available Jobs");
 
         return "index";
     }
