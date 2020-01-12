@@ -32,10 +32,10 @@
             <td>
                 <p><span>ID: </span><span th:text = "${job.getId()}"></span></p>
                 <p><span>Name: </span><span th:text = "${job.getName()}"></span></p>
-                <p><span>Employer: </span><a th:href="@{/search/results(searchType='employer',searchTerm=${job.getEmployer()})}" th:text = "${job.getEmployer()}"></a></p>
-                <p><span>Location: </span><a th:href="@{/search/results(searchType='location',searchTerm=${job.getLocation()})}" th:text = "${job.getLocation()}"></a></p>
                 <p><span>Position Type: </span><a th:href="@{/search/results(searchType='positionType',searchTerm=${job.getPositionType()})}" th:text = "${job.getPositionType()}"></a></p>
+                <p><span>Employer: </span><a th:href="@{/search/results(searchType='employer',searchTerm=${job.getEmployer()})}" th:text = "${job.getEmployer()}"></a></p>
                 <p><span>Core Skills: </span><a th:href="@{/search/results(searchType='coreCompetency',searchTerm=${job.getCoreCompetency()})}" th:text = "${job.getCoreCompetency()}"></a></p>
+                <p><span>Location: </span><a th:href="@{/search/results(searchType='location',searchTerm=${job.getLocation()})}" th:text = "${job.getLocation()}"></a></p>
             </td>
         </tr>
     </table>
